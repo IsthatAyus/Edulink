@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Login | EduLink</title>
+  </head>
+  <body>
+    <main>
+      <div class="container1">
+        <div class="left-inner">
+          <img src="../images/EduLink Login Page Design.png" alt="EduLink illustration" class="hero-image">
+        </div>
+      </div>
+
+      <div class="container2">
+        <div class="login-box">
+          <h2>Login to your account</h2>
+          <form id="loginForm">
+            <input type="text" placeholder="Username" required />
+            <input type="password" placeholder="Password" required />
+            <div class="remember-me">
+              <input type="checkbox" id="remember" />
+              <label for="remember">Remember me</label>&nbsp;&nbsp;
+              <span>||</span> &nbsp;&nbsp;
+              <label for="password" class ="forgot"><a href="#">Forgot Password?</a></label>
+            </div>
+            <button type="submit">Login</button>
+          </form>
+          <p class="signup-link">Don't have an account? <a href="#">Click Here</a></p>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
