@@ -12,3 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     alert('Invalid username or password. Please try again.');
   }
 });
+
+function message(){
+  alert('Message your admin to create an account.');
+}

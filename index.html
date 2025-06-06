@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>EduLink | Home</title>
-</head>
-<body>
-     <header>
+  </head>
+  <body>
+    <header>
       <div class="logo">
-        <img src="../images/logo.png" alt="EduLink Logo"/>
+        <img src="../images/logo.png" alt="EduLink Logo" />
       </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
       <nav>
         <a href="index.html">Home</a>
         <a href="#market">About Us</a>
         <a href="#events">Features</a>
         <a href="#faculty">Contact us</a>
-        <a href="pages/login.html" class ="login" onclick="openLoginModal()">Login</a>
+        <a href="pages/login.html" class="login" onclick="openLoginModal()"
+          >Login</a
+        >
       </nav>
     </header>
     <main>
       <div class="container">
-        <img src="images/annie-spratt-QckxruozjRg-unsplash.jpg" alt="" srcset="">
+        <div class="slider" id="slider">
+          <img
+            src="images/annie-spratt-QckxruozjRg-unsplash.jpg"
+            alt="Hero-image1"
+          />
+          <img
+            src="images/hannah-busing-Zyx1bK9mqmA-unsplash.jpg"
+            alt="Hero-image2"
+          />
+          <img src="images/hero1.jpg" alt="Hero-image3" />
+        </div>
+        <button class="slider-btn prev" onclick="moveSlide(-1)">
+          &#10094;
+        </button>
+        <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
       </div>
     </main>
     <script src="src/script.js"></script>
-</body>
+  </body>
 </html>
