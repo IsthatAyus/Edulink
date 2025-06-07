@@ -94,7 +94,7 @@ nav .login:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
   border: none;
   font-size: 2rem;
@@ -113,9 +113,23 @@ nav .login:hover {
   right: 20px;
 }
 
+
+.layout {
+  width: 100%;
+
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-  .slider-container, .slider img {
+
+  .slider-container,
+  .slider img {
     height: 30vh;
   }
 }
