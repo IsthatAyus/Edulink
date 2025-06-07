@@ -11,38 +11,63 @@
       <div class="logo">
         <img src="../images/logo.png" alt="EduLink Logo" />
       </div>
-
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-      <nav>
+      <nav id="navbar">
         <a href="index.html">Home</a>
-        <a href="#market">About Us</a>
-        <a href="#events">Features</a>
-        <a href="#faculty">Contact us</a>
-        <a href="pages/login.html" class="login" onclick="openLoginModal()"
-          >Login</a
-        >
+        <a href="#about">About Us</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact Us</a>
+        <a href="pages/login.html" class="login">Login</a>
       </nav>
     </header>
+
     <main>
+      <!-- Hero Slider -->
       <div class="container">
         <div class="slider" id="slider">
-          <img
-            src="images/annie-spratt-QckxruozjRg-unsplash.jpg"
-            alt="Hero-image1"
-          />
-          <img
-            src="images/hannah-busing-Zyx1bK9mqmA-unsplash.jpg"
-            alt="Hero-image2"
-          />
-          <img src="images/hero1.jpg" alt="Hero-image3" />
+          <img src="images/annie-spratt-QckxruozjRg-unsplash.jpg" alt="Hero 1" />
+          <img src="images/hannah-busing-Zyx1bK9mqmA-unsplash.jpg" alt="Hero 2" />
+          <img src="images/hero1.jpg" alt="Hero 3" />
         </div>
-        <button class="slider-btn prev" onclick="moveSlide(-1)">
-          &#10094;
-        </button>
+        <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
       </div>
+
+      <!-- About Section -->
+      <section id="about" class="section full-width-section light">
+        <div class="section-content">
+          <h2>About Us</h2>
+          <p>
+            EduLink is a platform designed to connect students, faculty, and academic resources.
+            Our mission is to simplify academic collaboration and make educational content accessible and organized.
+          </p>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="section full-width-section dark">
+        <div class="section-content">
+          <h2>Features</h2>
+          <div class="features-grid">
+            <div class="feature-card">📚 Course Resources</div>
+            <div class="feature-card">🧑‍🏫 Faculty Directory</div>
+            <div class="feature-card">📅 Event Management</div>
+            <div class="feature-card">💬 Student Forums</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section full-width-section light">
+        <div class="section-content">
+          <h2>Contact Us</h2>
+          <p>Email: support@edulink.com</p>
+          <p>Phone: +977 9816177116</p>
+          <p>Address: Budanikantha, Kathmandu</p>
+        </div>
+      </section>
     </main>
+
     <script src="src/script.js"></script>
   </body>
 </html>
