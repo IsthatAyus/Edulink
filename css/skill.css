@@ -39,3 +39,62 @@ nav a {
     color: #1f1f1f;
     font-weight: 600;
 }
+
+.maindiv {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.skillconnectpic1 {
+    width: 400px;
+    height: 350px;
+    object-fit: contain;
+}
+
+.head {
+    display: block;
+}
+
+.container {
+    width: 400px;
+    display: inline-block;
+
+}
+
+.Page {
+    width: 400px;
+}
+
+.profilepic {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.pppic {
+    display: inline-block;
+    width: 50px;
+}
+
+.perinfo {
+    display: inline-block;
+    width: 200px;
+}
+
+.name {
+    font-size: larger;
+    font-weight: 300;
+}
+
+.date {
+    font-size: smaller;
+    color: #615f5f;
+}
+
+.maindiv {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
