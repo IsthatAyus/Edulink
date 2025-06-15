@@ -1,132 +1,46 @@
-*{
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+  }
 
-}
-body{
-    background-color: #288bcd;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    align-items: center;
-}
-header {
+  body {
+      background-color: #f5f7fa;
+      color: #1f1f1f;
+  }
+
+  header {
       background-color: #ffffff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-}
-.logo {
+  }
+
+  .logo {
       display: flex;
       align-items: center;
       gap: 1rem;
-}
+  }
 
-.logo img {
+  .logo img {
       height: 40px;
-}
+  }
 
-nav {
+  nav {
       display: flex;
       gap: 1.5rem;
-      align-items: center;
-}
+  }
 
-nav a {
+  nav a {
       text-decoration: none;
       color: #1f1f1f;
       font-weight: 600;
-}
-nav.login{
-  background-color: #007ACC;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-nav .login:hover{
-    background-color:#005F99 ;
-}
-.container{
-    color: #fff;
-    max-width: 900px;
-    margin:1rem;
-}
-.container h1{
-    margin-bottom: 2rem;
+  }
 
-}
-.events-list{
-    color: #000;
-}
-.events-list .item{
-    background-color: #fff;
-    padding: 1.2rem;
-    margin-bottom:1rem;
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    gap: 1.5rem;
-    border-radius: 1rem;
-}
-.events-list .item .date{
-    background-color: #4a8df4;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 5rem;
-}
-.events-list.item.date.day{
-    font-size: .9rem;
-
-}
-.events-list.item.date.time{
-    font-size: 1.15rem;
-    font-weight: bold;
-}
-.events-list.item.name h2{
-    margin-bottom: .5rem;
-}
-.events-list.item.Register{
-    cursor: pointer;
-    background-color: transparent;
-    padding: 1rem;
-    text-wrap: nowrap;
-    align-self: start;
-    border: 0;
-    border-radius: .5rem;
-    transition: all 200ms ease;
-}
-.events-list.item.Register:hover{
-    background-color: #000;
-    color: #fff;
-}
-@media(max-width:768px){
-    .events-list{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap:1rem;
-    }
-    .events-list.item.date{
-        height: min-content;
-    }
-    .events-list.item.name{
-        grid-column: 2 /-1;
-    }
-    .events-list.item.Register{
-        grid-column: 1 /-1;
-    }
-}
-@media(max-width:600px){
-    .events-list{
-        grid-template-columns: 1fr;
-    }
-}
+  /* Mobile styles */
 @media (max-width: 768px) {
   header {
     flex-wrap: wrap;
@@ -160,5 +74,4 @@ nav .login:hover{
     text-align: center;
   }
 }
-
 
