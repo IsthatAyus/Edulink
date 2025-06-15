@@ -8,9 +8,7 @@
 body{
     background-color: #288bcd;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
-    display: grid;
-    place-content: center;
+    align-items: center;
 }
 header {
       background-color: #ffffff;
