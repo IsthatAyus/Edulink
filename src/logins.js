@@ -1,4 +1,3 @@
-// Load users from localStorage or fetch from JSON file
 async function loadUsers() {
   // Check if users are already in localStorage
   const storedUsers = localStorage.getItem('users');
