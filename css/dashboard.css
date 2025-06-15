@@ -31,7 +31,7 @@
 
   nav {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.8rem;
   }
 
   nav a {
@@ -39,6 +39,23 @@
       color: #1f1f1f;
       font-weight: 600;
   }
+
+  nav a:hover {
+  color: #FF6B6B;
+}
+
+nav .login {
+  background-color: #007ACC;
+  color: white !important;
+  padding: 7px 15px;
+  border-radius: 2px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav .login:hover {
+  background-color: #005F99;
+}
 
   main {
       display: grid;
@@ -156,4 +173,3 @@
     text-align: center;
   }
 }
-
