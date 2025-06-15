@@ -9,7 +9,7 @@ async function loadUsers() {
   } else {
     // If not in localStorage, fetch from JSON file
     try {
-      const response = await fetch('users.json');
+      const response = await fetch('../src/users.json');
       if (!response.ok) {
         throw new Error('Failed to fetch users.json');
       }
@@ -21,14 +21,8 @@ async function loadUsers() {
       return usersData;
     } catch (error) {
       console.error('Error loading users:', error);
-      // Fallback to hardcoded users if JSON file fails to load
-      const fallbackUsers = [
-        { "username": "MIC-Ayush", "password": "Ayush@123" },
-        { "username": "MIC-Unique", "password": "Unique@123" },
-        { "username": "MIC-Samjana", "password": "Samjana@123" }
-      ];
-      localStorage.setItem('users', JSON.stringify(fallbackUsers));
-      return fallbackUsers;
+      alert('Failed to load user data. Please check if users.json file exists and is accessible.');
+      return [];
     }
   }
 }
@@ -113,6 +107,47 @@ function logout() {
   // localStorage.removeItem('rememberedUser'); // Uncomment to forget username too
   window.location.href = 'login.html';
 }
+
+// Function to refresh users data from JSON file (useful for development/testing)
+async function refreshUsersData() {
+  try {
+    console.log('Refreshing users data...');
+
+    // Remove cached users from localStorage
+    localStorage.removeItem('users');
+
+    // Fetch fresh data from JSON file
+    const response = await fetch('../src/users.json');
+    if (!response.ok) {
+      throw new Error('Failed to fetch users.json');
+    }
+
+    const freshUsersData = await response.json();
+
+    // Store fresh data in localStorage
+    localStorage.setItem('users', JSON.stringify(freshUsersData));
+
+    // Update the global variable
+    usersData = freshUsersData;
+
+    console.log('Users data refreshed successfully:', freshUsersData);
+    alert('Users data refreshed! New users are now available for login.');
+
+    return freshUsersData;
+  } catch (error) {
+    console.error('Error refreshing users data:', error);
+    alert('Failed to refresh users data. Please check the console for details.');
+  }
+}
+
+// Add a keyboard shortcut to refresh users (Ctrl+Shift+R)
+document.addEventListener('keydown', function(event) {
+  if (event.ctrlKey && event.shiftKey && event.key === 'R') {
+    event.preventDefault();
+    refreshUsersData();
+  }
+});
+
 
 function message() {
   alert('Message your admin to create an account.');
