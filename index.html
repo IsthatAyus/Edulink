@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <title>EduLink | Home</title>
   </head>
-  <body>
+ <body>
     <header>
       <div class="logo">
-        <img src="images/logo.png" alt="EduLink Logo" />
+        <img src="./images/logo.png" alt="EduLink Logo" />
       </div>
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <nav id="navbar">
-        <a href="index.html">Home</a>
+        <a href="./index.html">Home</a>
         <a href="./pages/about.html">About Us</a>
         <a href="./pages/features.html">Features</a>
         <a href="./pages/contact.html">Contact Us</a>
@@ -22,85 +28,86 @@
     </header>
 
     <main>
-
-      <div class="container">
+      <section id="home" class="hero-container">
         <div class="slider" id="slider">
-          <img
-            src="images/annie-spratt-QckxruozjRg-unsplash.jpg"
-            alt="Hero 1"
-          />
-          <img
-            src="images/hannah-busing-Zyx1bK9mqmA-unsplash.jpg"
-            alt="Hero 2"
-          />
-          <img src="images/hero1.jpg" alt="Hero 3" />
+          <img src="./images/hero1.jpg" alt="Students collaborating" />
+          <img src="./images/hannah-busing-Zyx1bK9mqmA-unsplash.jpg" alt="Learning together" />
+          <img src="./images/annie-spratt-QckxruozjRg-unsplash.jpg" alt="Digital learning" />
         </div>
-        <button class="slider-btn prev" onclick="moveSlide(-1)">
-          &#10094;
-        </button>
-        <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
-      </div>
+
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h1 class="hero-title">Welcome to EduLink</h1>
+            <p class="hero-subtitle">Connecting students, faculty, and academic resources for a better educational experience</p>
+            <div class="hero-buttons">
+              <a href="#features" class="hero-btn primary">Explore Features</a>
+              <a href="#about" class="hero-btn secondary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-dots">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section>
 
       <!-- About Section -->
-      <section id="about" class="section full-width-section light">
+      <section id="about" class="full-width-section light">
         <div class="section-content">
-          <h2>About Us</h2>
+          <h2>About EduLink</h2>
           <p>
-            EduLink is a platform designed to connect students, faculty, and
-            academic resources. Our mission is to simplify academic
-            collaboration and make educational content accessible and organized.
+            EduLink is a comprehensive platform designed to revolutionize educational collaboration.
+            We connect students, faculty, and academic resources in one seamless ecosystem, making
+            learning more accessible, organized, and engaging for everyone involved.
           </p>
         </div>
       </section>
 
       <!-- Features Section -->
-      <section id="features" class="section full-width-section dark">
+      <section id="features" class="full-width-section dark">
         <div class="section-content">
-          <h2>What We Do</h2>
+          <h2>What We Offer</h2>
           <div class="features-grid">
             <div class="feature-card">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png"
-                alt="Course Resources"
-              />
+              <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Course Resources" />
               <h3>Course Resources</h3>
-              <a href="#">MORE</a>
+              <p>Access comprehensive study materials, assignments, and resources for all your courses in one place.</p>
+              <a href="#resources">Learn More</a>
             </div>
             <div class="feature-card">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png"
-                alt="Faculty Directory"
-              />
+              <img src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png" alt="Faculty Directory" />
               <h3>Faculty Directory</h3>
-              <a href="#">MORE</a>
+              <p>Connect with professors and academic staff easily through our comprehensive faculty directory.</p>
+              <a href="#faculty">Learn More</a>
             </div>
             <div class="feature-card">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/10090/10090043.png"
-                alt="Event Management"
-              />
+              <img src="https://cdn-icons-png.flaticon.com/512/10090/10090043.png" alt="Event Management" />
               <h3>Event Management</h3>
-              <a href="#">MORE</a>
+              <p>Stay updated with campus events, workshops, and academic activities happening around you.</p>
+              <a href="#events">Learn More</a>
             </div>
             <div class="feature-card">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png"
-                alt="Skill Share"
-              />
+              <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="Skill Share" />
               <h3>Skill Share</h3>
-              <a href="#">MORE</a>
+              <p>Share your knowledge and learn from peers in our collaborative skill-sharing community.</p>
+              <a href="#skills">Learn More</a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="section full-width-section light">
+      <section id="contact" class="full-width-section light">
         <div class="section-content">
-          <h2>Contact Us</h2>
-          <p>Email: support@edulink.com</p>
-          <p>Phone: +977 9816177116</p>
-          <p>Address: Budanikantha, Kathmandu</p>
+          <h2>Get In Touch</h2>
+          <p>Ready to transform your educational experience? Contact us today!</p>
+          <div class="contact-info">
+            <p><strong>Email:</strong> support@edulink.com</p>
+            <p><strong>Phone:</strong> +977 9816177116</p>
+            <p><strong>Address:</strong> Budanikantha, Kathmandu, Nepal</p>
+          </div>
         </div>
       </section>
     </main>
