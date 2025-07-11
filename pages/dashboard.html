@@ -3,69 +3,150 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/dashboard.css" />
-    <title>EduLink | Home</title>
+    <title>EduLink | Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/hold.css">
   </head>
 
   <body>
     <header>
       <div class="logo">
-        <img src="../images/logo.png" alt="EduLink Logo"/>
+        🎓 EduLink
       </div>
-      <nav>
-        <a href="./dashboard.html">Dashboard</a>
-        <a href="./skillconnect.html">Skill Connect</a>
-        <a href="./marketplace.html">Marketplace</a>
-        <a href="./events.html">Events</a>
-        <a href="./facultyInfo.html">Faculty Info</a>
-        <a href="../index.html" class="login">Log Out</a>
-      </nav>
+        <nav>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#skillconnect">Skill Connect</a>
+          <a href="#marketplace">Marketplace</a>
+          <a href="#events">Events</a>
+          <a href="#faculty">Faculty Info</a>
+         <a class="logout-btn" id="logoutBtn" href="../index.html">
+            <span>🚪</span> Log Out
+         </a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <div class="card" id="dashboard">
-        <h3>Dashboard</h3>
-        <div class="content">Overview of your activities and quick links.</div>
-        <a href="#" class="btn">View</a>
+      <div class="welcome-banner">
+        <h2 id="welcomeMessage">Welcome back!</h2>
       </div>
 
-      <div class="cards-grid">
-        <div class="card" id="skills">
-          <h3>Skill Connect</h3>
-          <div class="content">
-            Connect with peers based on shared skills and collaborate on
-            projects.
+      <div class="quick-stats">
+        <div class="stat-card" onclick="showFeature('connections')">
+          <h3>12</h3>
+          <p>Active Connections</p>
+        </div>
+        <div class="stat-card" onclick="showFeature('marketplace')">
+          <h3>5</h3>
+          <p>Marketplace Items</p>
+        </div>
+        <div class="stat-card" onclick="showFeature('events')">
+          <h3>3</h3>
+          <p>Upcoming Events</p>
+        </div>
+        <div class="stat-card" onclick="showFeature('faculty')">
+          <h3>8</h3>
+          <p>Faculty Contacts</p>
+        </div>
+      </div>
+
+      <div class="content-grid">
+        <div class="main-content">
+          <div class="recent-activity">
+            <h3>Recent Activity</h3>
+            <div class="activity-item" onclick="showActivity('book')">
+              <div class="activity-icon">📚</div>
+              <div class="activity-details">
+                <h4>New book listed in Marketplace</h4>
+                <p>Someone listed "Advanced Mathematics" for sale • 2 hours ago</p>
+              </div>
+            </div>
+            <div class="activity-item" onclick="showActivity('skill')">
+              <div class="activity-icon">🎯</div>
+              <div class="activity-details">
+                <h4>Skill match found</h4>
+                <p>New connection available for Python programming • 4 hours ago</p>
+              </div>
+            </div>
+            <div class="activity-item" onclick="showActivity('event')">
+              <div class="activity-icon">📅</div>
+              <div class="activity-details">
+                <h4>Event reminder</h4>
+                <p>Tech Workshop starts in 2 days • 1 day ago</p>
+              </div>
+            </div>
+            <div class="activity-item" onclick="showActivity('faculty')">
+              <div class="activity-icon">👨‍🏫</div>
+              <div class="activity-details">
+                <h4>Faculty office hours updated</h4>
+                <p>Dr. Smith updated availability schedule • 2 days ago</p>
+              </div>
+            </div>
           </div>
-          <a href="skillconnect.html" class="btn">View</a>
+
+          <div class="cards-grid">
+            <div class="card" onclick="navigateTo('skillconnect')">
+              <h3>🎯 Skill Connect</h3>
+              <div class="content">
+                Connect with peers based on shared skills and collaborate on projects. Build your network and learn together.
+              </div>
+              <a href="#" class="btn">Explore Connections</a>
+            </div>
+
+            <div class="card" onclick="navigateTo('marketplace')">
+              <h3>📚 Books/Notes Marketplace</h3>
+              <div class="content">
+                Buy, sell, or exchange academic resources easily. Find textbooks, notes, and study materials at great prices.
+              </div>
+              <a href="#" class="btn">Browse Marketplace</a>
+            </div>
+
+            <div class="card" onclick="navigateTo('events')">
+              <h3>🎉 Events</h3>
+              <div class="content">
+                Stay updated with college events, RSVP, and participate actively in campus activities and workshops.
+              </div>
+              <a href="#" class="btn">View Events</a>
+            </div>
+
+            <div class="card" onclick="navigateTo('faculty')">
+              <h3>👨‍🏫 Faculty Info</h3>
+              <div class="content">
+                Check faculty availability, subjects, and book appointments. Connect with your teachers and advisors.
+              </div>
+              <a href="#" class="btn">Contact Faculty</a>
+            </div>
+          </div>
         </div>
 
-        <div class="card" id="market">
-          <h3>Books/Notes Marketplace</h3>
-          <div class="content">
-            Buy, sell, or exchange academic resources easily.
+        <div class="sidebar">
+          <div class="notification-panel">
+            <h3>🔔 Notifications</h3>
+            <div class="notification-item">
+              <h4>Assignment Due</h4>
+              <p>Computer Science assignment due tomorrow</p>
+            </div>
+            <div class="notification-item">
+              <h4>New Message</h4>
+              <p>You have 3 new messages from connections</p>
+            </div>
+            <div class="notification-item">
+              <h4>Event Reminder</h4>
+              <p>Tech Workshop registration closes today</p>
+            </div>
           </div>
-          <a href="marketplace.html" class="btn">View</a>
-        </div>
 
-        <div class="card" id="events">
-          <h3>Events</h3>
-          <div class="content">
-            Stay updated with college events, RSVP, and participate actively.
+          <div class="quick-actions">
+            <h3>⚡ Quick Actions</h3>
+            <a href="#" class="action-btn" onclick="quickAction('post')">📝 Post Something</a>
+            <a href="#" class="action-btn" onclick="quickAction('sell')">💰 Sell Item</a>
+            <a href="#" class="action-btn" onclick="quickAction('connect')">🤝 Find Connection</a>
+            <a href="#" class="action-btn" onclick="quickAction('schedule')">📅 Schedule Meeting</a>
           </div>
-          <a href="events.html" class="btn">View</a>
         </div>
-
-        <div class="card" id="faculty">
-          <h3>Teacher Info</h3>
-          <div class="content">
-            Check faculty availability, subjects, and book appointments.
-          </div>
-          <a href="facultyInfo.html" class="btn">View</a>
-        </div>
-
       </div>
     </main>
 
+    <script src="../src/dash.js"></script>
   </body>
 </html>
