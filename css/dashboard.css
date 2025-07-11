@@ -28,48 +28,16 @@ header {
     font-weight: bold;
     color: #1a1aff;
 }
+.logo img {
+  height: 40px;
+}
+
 
 .header-right {
     display: flex;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background-color: #f8f9ff;
-    padding: 0.8rem 1.2rem;
-    border-radius: 8px;
-    border: 1px solid #e1e5f0;
-}
-
-.user-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #1a1aff, #4d4dff);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.user-details h4 {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #1a1aff;
-    font-weight: 600;
-}
-
-.user-details p {
-    margin: 0;
-    font-size: 0.75rem;
-    color: #666;
 }
 
 nav {
