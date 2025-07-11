@@ -77,12 +77,7 @@ document.querySelectorAll('.activity ul li').forEach(li => {
     });
 });
 
-document.querySelectorAll('nav a').forEach(a => {
-    a.addEventListener('click', (e) => {
-        e.preventDefault();
-        navigateTo(a.textContent);
-    });
-});
+
 
 document.querySelectorAll('.quick-actions button').forEach(button => {
     button.addEventListener('click', () => {
@@ -91,14 +86,10 @@ document.querySelectorAll('.quick-actions button').forEach(button => {
     });
 });
 
+// Only handle logout with JS, let other links work normally
 document.getElementById('logoutBtn').addEventListener('click', function(e) {
-  e.preventDefault(); // Prevent default navigation
-  // Clear login/session info (example: remove a "loggedIn" flag or token)
-  // localStorage.removeItem('loggedIn'); // if you use a flag
-  // Optionally clear all localStorage (be careful if you store other data)
-  // localStorage.clear();
-
-  // Redirect to homepage
+  e.preventDefault();
+  // localStorage.clear(); // or remove only login info
   window.location.href = '../index.html';
 });
 
