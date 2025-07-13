@@ -12,10 +12,10 @@ function showFeature(feature) {
 // Function to show activity details
 function showActivity(activity) {
     const messages = {
-        book: "📚 Advanced Mathematics textbook listed for $45. Contact seller for details.",
+        book: "📚 Advanced Mathematics textbook listed for Rs. 500. Contact library for details.",
         skill: "🎯 Found 3 Python developers in your area. Connect with them now!",
         event: "📅 Tech Workshop: 'AI in Modern Development' - Register now!",
-        faculty: "👨‍🏫 Dr. Smith is available Mon-Wed 2-4 PM. Book an appointment."
+        faculty: "👨‍🏫 Roshan Nyupane is available Mon-Wed 2-4 PM. Book an appointment."
     };
     alert(messages[activity] || "Activity details coming soon!");
 }
