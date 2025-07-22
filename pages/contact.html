@@ -68,5 +68,20 @@
         </form>
       </div>
     </div>
+      <script>
+      function toggleMenu() {
+        const navbar = document.getElementById("navbar");
+        navbar.classList.toggle("show");
+      }
+
+      document.addEventListener("click", function (e) {
+        const navbar = document.getElementById("navbar");
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        if (!navbar.contains(e.target) && !menuToggle.contains(e.target)) {
+          navbar.classList.remove("show");
+        }
+      });
+    </script>
   </body>
 </html>

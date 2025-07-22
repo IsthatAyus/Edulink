@@ -359,44 +359,113 @@ main {
 }
 
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .header-right {
-        width: 100%;
-        justify-content: center;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
     .welcome-banner h2 {
         font-size: 1.5rem;
     }
 
     .quick-stats {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
 
     .stat-card h3 {
         font-size: 1.8rem;
     }
 
-    main {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .quick-stats {
+    .content-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .cards-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
+
+    .card .content {
+        font-size: 0.9rem;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .notification-panel, .quick-actions {
+        padding: 1rem;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        background-color: #ffffff;
+        margin-top: 10px;
+        border-top: 1px solid #ddd;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav a {
+        padding: 12px 16px;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav .logout-btn {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+
+
+
+/* Mobile Styles */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1f1f1f;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    background-color: #ffffff;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav .login {
+    margin: 10px;
+    text-align: center;
+  }
 }
