@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Registration</title>
+  <link rel="stylesheet" href="../css/registration.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Event Registration Form</h2>
+    <form id="registrationForm">
+  <div class="form-group">
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" />
+    <div class="error" id="fullnameError"></div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" />
+    <div class="error" id="emailError"></div>
+  </div>
+
+  <div class="form-group">
+    <label>Gender:</label>
+    <label><input type="radio" name="gender" value="Male" /> Male</label>
+    <label><input type="radio" name="gender" value="Female" /> Female</label>
+    <div class="error" id="genderError"></div>
+  </div>
+
+  <div class="form-group">
+    <label for="dob">Date of Birth:</label>
+    <input type="text" id="dob" name="dob" placeholder="MM/DD/YYYY" />
+    <div class="error" id="dobError"></div>
+  </div>
+
+  <div class="form-group">
+    <label>Skills:</label>
+    <label><input type="checkbox" name="skills" value="HTML" /> HTML</label>
+    <label><input type="checkbox" name="skills" value="CSS" /> CSS</label>
+    <label><input type="checkbox" name="skills" value="JavaScript" /> JavaScript</label>
+    <div class="error" id="skillsError"></div>
+  </div>
+
+  <div class="form-group">
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="">Select</option>
+      <option value="Nepal">Nepal</option>
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+    </select>
+    <div class="error" id="countryError"></div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="At least 6 characters" />
+    <div class="error" id="passwordError"></div>
+  </div>
+
+  <div class="form-group">
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#dob").datepicker({
+        dateFormat: "mm/dd/yy",
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "1950:2025"
+      });
+    });
+  document.getElementById("registrationForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent form from submitting
+
+    let isValid = true;
+
+    // Clear previous errors
+    document.querySelectorAll(".error").forEach((el) => (el.textContent = ""));
+
+    // Full Name
+    const fullname = document.getElementById("fullname").value.trim();
+    if (fullname === "") {
+      document.getElementById("fullnameError").textContent = "Full Name is required.";
+      isValid = false;
+    }
+
+    // Email
+    const email = document.getElementById("email").value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === "") {
+      document.getElementById("emailError").textContent = "Email is required.";
+      isValid = false;
+    } else if (!emailRegex.test(email)) {
+      document.getElementById("emailError").textContent = "Enter a valid email address.";
+      isValid = false;
+    }
+
+    // Gender
+    const gender = document.querySelector('input[name="gender"]:checked');
+    if (!gender) {
+      document.getElementById("genderError").textContent = "Gender is required.";
+      isValid = false;
+    }
+
+    // DOB
+    const dob = document.getElementById("dob").value.trim();
+    if (dob === "") {
+      document.getElementById("dobError").textContent = "Date of Birth is required.";
+      isValid = false;
+    }
+
+    // Skills
+    const skills = document.querySelectorAll('input[name="skills"]:checked');
+    if (skills.length === 0) {
+      document.getElementById("skillsError").textContent = "Select at least one skill.";
+      isValid = false;
+    }
+
+    // Country
+    const country = document.getElementById("country").value;
+    if (country === "") {
+      document.getElementById("countryError").textContent = "Please select a country.";
+      isValid = false;
+    }
+
+    // Password
+    const password = document.getElementById("password").value;
+    if (password === "") {
+      document.getElementById("passwordError").textContent = "Password is required.";
+      isValid = false;
+    } else if (password.length < 6) {
+      document.getElementById("passwordError").textContent = "Password must be at least 6 characters.";
+      isValid = false;
+    }
+
+    // Final check
+    if (isValid) {
+      alert("Form submitted successfully!");
+      // You can submit the form data via AJAX or similar here
+      // this.submit(); // uncomment if needed
+    }
+  });
+
+  </script>
+</body>
+</html>

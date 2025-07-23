@@ -87,10 +87,10 @@ document.querySelectorAll('.quick-actions button').forEach(button => {
 });
 
 // Only handle logout with JS, let other links work normally
-document.getElementById('logoutBtn').addEventListener('click', function(e) {
-  e.preventDefault();
-  // localStorage.clear(); // or remove only login info
-  window.location.href = '../index.html';
+document.getElementById('logoutBtn').addEventListener('click', function (e) {
+    e.preventDefault();
+    // localStorage.clear(); // or remove only login info
+    window.location.href = '../index.html';
 });
 
 // Helper function to format date (copied from login.js for consistency)
@@ -98,3 +98,16 @@ function formatDate(dateString) {
     const date = new Date(dateString);
     return date.toLocaleDateString() + ' at ' + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
+function toggleMenu() {
+    const navbar = document.getElementById("navbar");
+    navbar.classList.toggle("show");
+}
+
+document.addEventListener("click", function (e) {
+    const navbar = document.getElementById("navbar");
+    const menuToggle = document.querySelector(".menu-toggle");
+
+    if (!navbar.contains(e.target) && !menuToggle.contains(e.target)) {
+        navbar.classList.remove("show");
+    }
+});

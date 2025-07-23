@@ -1,73 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/about.css" />
     <title>EduLink | About</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <img src="../images/logo.png" alt="EduLink Logo" />
-        </div>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <nav id="navbar">
-            <a href="../index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="../pages/features.html">Features</a>
-            <a href="../pages/contact.html">Contact Us</a>
-            <a href="../pages/login.html" class="login">Login</a>
-        </nav>
+      <div class="logo">
+        <img src="../images/logo.png" alt="EduLink Logo" />
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav id="navbar">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="../pages/contact.html">Contact Us</a>
+        <a href="../pages/login.html" class="login">Login</a>
+      </nav>
     </header>
 
     <section id="about" class="full-width-section light">
-        <div class="section-content">
-            <h2>About EduLink</h2>
-            <p>
-                EduLink is a comprehensive platform designed to revolutionize educational collaboration.
-                We connect students, faculty, and academic resources in one seamless ecosystem, making
-                learning more accessible, organized, and engaging for everyone involved.
-            </p>
-        </div>
+      <div class="section-content">
+        <h2>About EduLink</h2>
+        <p>
+          EduLink is a comprehensive platform designed to revolutionize
+          educational collaboration. We connect students, faculty, and academic
+          resources in one seamless ecosystem, making learning more accessible,
+          organized, and engaging for everyone involved.
+        </p>
+      </div>
     </section>
 
     <div class="developers-header">
-        <h2>From The Developers</h2>
-        <p>We are students from Malpi International College, pursuing Bachelor of Computer Systems and Information Technology. This project represents our passion for web development and our commitment to creating practical solutions.</p>
+      <h2>From The Developers</h2>
+      <p>
+        We are students from Malpi International College, pursuing Bachelor of
+        Computer Systems and Information Technology. This project represents our
+        passion for web development and our commitment to creating practical
+        solutions.
+      </p>
     </div>
 
     <div class="section">
-        <div class="section-image developer-image">
-            <img src="../images/annie-spratt-QckxruozjRg-unsplash.jpg" alt="Bikram Khatri" />
-        </div>
-        <div class="section-content">
-            <h2>Ayush Shrestha</h2>
-            <p>Working on Edulink was super fun! It was a great opportunity to learn and grow in the field of web development. Working with a team of talented developers was a great experience.</p>
-            <p>My favorite feature is ability to login via localstorage and json data. It adds a new level of security and convenience for users.</p>
-        </div>
+      <div class="section-image developer-image">
+        <img src="../images/i.jpg" alt="Ayush" />
+      </div>
+      <div class="section-content">
+        <h2>Ayush Shrestha</h2>
+        <p>
+          Working on Edulink was super fun! It was a great opportunity to learn
+          and grow in the field of web development. Working with a team of
+          talented developers was a great experience.
+        </p>
+        <p>
+          My favorite feature is ability to login via localstorage and json
+          data. It adds a new level of security and convenience for users.
+        </p>
+      </div>
     </div>
 
     <div class="section">
-        <div class="section-image developer-image">
-            <img src="" alt="" />
-        </div>
-        <div class="section-content">
-            <h2>Unique Acharya</h2>
-            <p>Add your personal thoughts and experience about the project here. Share what motivated you to work on this online bookstore, what challenges you faced, and what you learned throughout the development process.</p>
-            <p>You can also mention your favorite features that you developed, your role in the team, and your future goals in web development.</p>
-        </div>
+      <div class="section-image developer-image">
+        <img src="../images/u.jpg" alt="Unique" />
+      </div>
+      <div class="section-content">
+        <h2>Unique Acharya</h2>
+        <p>
+          I really enjoyed working on this project. It was a great opportunity
+          to learn and grow in web development.
+        </p>
+        <p>
+          I particularly enjoyed the opportunity to work with a team of talented
+          developers.
+        </p>
+      </div>
     </div>
 
     <div class="section">
-        <div class="section-image developer-image">
-            <img src="../images/image7.jpg" alt="image"/>
-        </div>
-        <div class="section-content">
-            <h2>Samhjana Rai</h2>
-            <p>It gave me a great chance to learn and grow in web development and collaborating with such a talented team made it even better.</p>
-            <p>One of my favorite parts was designing and developing the event page. These sections play an important role in making the platform more organized and user-friendly.</p>
-        </div>
+      <div class="section-image developer-image">
+        <img src="../images/s.jpg" alt="Samhjana" />
+      </div>
+      <div class="section-content">
+        <h2>Samhjana Rai</h2>
+        <p>
+          It gave me a great chance to learn and grow in web development and
+          collaborating with such a talented team made it even better.
+        </p>
+        <p>
+          One of my favorite parts was designing and developing the event page.
+          These sections play an important role in making the platform more
+          organized and user-friendly.
+        </p>
+      </div>
     </div>
-</body>
+
+    <script>
+      function toggleMenu() {
+        const navbar = document.getElementById("navbar");
+        navbar.classList.toggle("show");
+      }
+
+      document.addEventListener("click", function (e) {
+        const navbar = document.getElementById("navbar");
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        if (!navbar.contains(e.target) && !menuToggle.contains(e.target)) {
+          navbar.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
 </html>
