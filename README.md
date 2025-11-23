@@ -30,7 +30,7 @@ https://isthatayus.github.io/Edulink/
 ---
 
 ## AI Automation
-I have given n8n power to see
+I have given n8n power to see more AI in my daily life
 
 ## Fun Fact
 
